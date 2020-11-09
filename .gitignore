@@ -154,3 +154,5 @@ widget_svelte_example/labextension/*.tgz
 
 # Packed lab extensions
 widget_svelte_example/labextension
+package-lock.json
+
