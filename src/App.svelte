@@ -1,9 +1,10 @@
 <script>
   export let model;
 
-  // Creates a Svelte store (https://svelte.dev/tutorial/writable-stores) that syncs with the named Traitlet in widget.ts and example.py.
+  // Creates a Svelte store (https://svelte.dev/tutorial/writable-stores) that syncs with the named Traitlet example.py.
   import { createValue } from './stores';
-  let value = createValue(model, 'value');
+  // createValue(model, /*Traitlet name*/, /*default value*/)
+  let value = createValue(model, 'value', 0);
 </script>
 
 <style>
