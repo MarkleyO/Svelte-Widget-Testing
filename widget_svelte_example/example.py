@@ -1,15 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Copyright (c) Alex Cabrera.
-# Distributed under the terms of the Modified BSD License.
-
-"""
-Svelte example widget.
-"""
-
 from ipywidgets import DOMWidget
-from traitlets import Integer, Unicode
+from traitlets import Integer, Unicode, List
 from ._frontend import module_name, module_version
 
 
@@ -22,4 +15,7 @@ class ExampleWidget(DOMWidget):
     _view_module = Unicode(module_name).tag(sync=True)
     _view_module_version = Unicode(module_version).tag(sync=True)
 
+
     value = Integer(0).tag(sync=True)
+    unit = Unicode('clicks').tag(sync=True)
+    numberList = List([]).tag(sync=True)
